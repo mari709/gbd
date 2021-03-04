@@ -20,7 +20,7 @@ include './conexion/conexion.php';
         <!-- Links -->
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" href="#">Link 1</a>
+            <a class="nav-link" href="buscar_personas.php">Buscar Persona</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Link 2</a>
@@ -40,21 +40,8 @@ include './conexion/conexion.php';
         </ul>
       </nav>
       <section class="container seccion-principal">
-     <!--   <h1>Buscador de personas</h1>
-        <div class="formulario">
-		<label for="caja_busqueda">Nombre</label>
-            <input type="text" name="caja_busqueda" id="caja_busqueda" placeholder ="Ej: Juan Perez" class ='cajab'>
-            <label for="caja_busqueda2">Calle</label>
-            <input type="text" name="caja_busqueda2" id ="caja_busqueda2" placeholder ="Ej: San Martin" class ='cajab'>
-            <label form="caja_busqueda3">Localidad</label>
-            <input type="text" name="caja_busqueda3" id ="caja_busqueda3" placeholder ="Ej: Mar del Plata" class = 'cajab'>    
-        </div>
--->
 
-        <div id="mi-resultado">
 <?php
-include './conexion/conexion.php';
-
 //consulta que muestra el nombre de la ultima calle
 $sql = "SELECT nombre, dir_calle, dir_numero from contactos
 where dir_calle LIKE 'falucho'
