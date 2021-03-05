@@ -14,13 +14,15 @@ include './conexion/conexion.php';
     <title>Buscar Personas</title>
     <meta name="description" content="El sistema nº1 de analisis de datos de contribuyentes de América Latina">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="estilos/style.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 </head>
 <body>
-    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
         <!-- Brand -->
-        <a class="navbar-brand" href="#">Logo</a>
-      
+        <a class="navbar-brand" href="#">
+        <img src="favicon.jpg" width="40" height="40" class="d-inline-block align-top" alt="">
+    </a>
         <!-- Links -->
         <ul class="navbar-nav">
           <li class="nav-item">
@@ -44,17 +46,26 @@ include './conexion/conexion.php';
         </ul>
       </nav>
       <section class="container buscador-personas">
-       <h1>Buscador de personas</h1>
-        <div class="form-3">
-		      <label for="input-nombre">Nombre</label>
-          <input type="text" class="input-bloque-persona" id="input-nombre" name="input-nombre" placeholder ="Helena Lopez" >
+       <h1 class="h1-encabezado pt-4 pb-4">Buscador de personas</h1>
+        <form class="row">
 
-          <label for="input-calle">Calle</label>
-          <input type="text" class="input-bloque-persona" id="input-calle" name="input-calle" placeholder ="Falucho">
+          <div class="col-md-4">
+            <label for="input-nombre">Nombre</label>
+            <input type="text" class="form-control input-bloque-persona" id="input-nombre" name="input-nombre" placeholder ="Helena Lopez" >
+          </div>
+          
+          <div class="col-md-4">
+            <label for="input-calle">Calle</label>
+            <input type="text" class="form-control input-bloque-persona" id="input-calle" name="input-calle" placeholder ="Falucho">
+          </div>
 
-          <label form="input-localidad">Localidad</label>
-          <input type="text" class="input-bloque-persona" id="input-localidad" name="input-localidad" placeholder ="Mar del Plata">    
-        </div>
+          <div class="col-md-4">
+            <label form="input-localidad">Localidad</label>
+            <input type="text" class="form-control input-bloque-persona" id="input-localidad" name="input-localidad" placeholder ="Mar del Plata">    
+          </div>
+
+        </form>
+        <div class="pt-4" id="resultado-personas"></div>
       </section>
 
 
@@ -62,7 +73,6 @@ include './conexion/conexion.php';
 
 
 
-      <div id="resultado-personas"></div>
 
       <script>
       
@@ -78,7 +88,7 @@ include './conexion/conexion.php';
           url: 'personas_buscadas.php',
           type: 'post',
           beforeSend: function() {
-            $("#resultado-personas").html("Realizando búsqueda...");
+            $("#resultado-personas").html("<div class='container'> Realizando búsqueda...</div>");
           },
           success: function(response) {
             $("#resultado-personas").html(response);
