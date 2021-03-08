@@ -1,5 +1,7 @@
 <?php
 include './conexion/conexion.php';
+$name = "";
+$name ="";
 ?>
 <!-- 
   buscar una persona en particular, indicando completa o parcialmente su nombre, domicilio o localidad, pudiendo generar un reporte impreso de la ficha del contribuyente con todos los datos. En caso que la búsqueda arroje varios resultados, debe listarlos y dar la posibilidad de acceder a cada ficha. Si la búsqueda arroja más de 50 resultados debe indicar que se reformule la búsqueda.-->
@@ -47,25 +49,37 @@ include './conexion/conexion.php';
       </nav>
       <section class="container buscador-personas">
        <h1 class="h1-encabezado pt-4 pb-4">Buscador de personas</h1>
-        <form class="row">
+        
+          <fieldset class=" p-4">
+            <legend class="w-auto">Buscar personas</legend>
+            <div class="row">
 
-          <div class="col-md-4">
-            <label for="input-nombre">Nombre</label>
-            <input type="text" class="form-control input-bloque-persona" id="input-nombre" name="input-nombre" placeholder ="Helena Lopez" >
-          </div>
-          
-          <div class="col-md-4">
-            <label for="input-calle">Calle</label>
-            <input type="text" class="form-control input-bloque-persona" id="input-calle" name="input-calle" placeholder ="Falucho">
-          </div>
+              <div class="col-sm-4">
+                <div class="form-group">
+                  <form>
+                  <label for="input-nombre">Nombre</label>
+                  <input type="text" class="form-control input-bloque-persona" id="input-nombre" name="input-nombre"  placeholder ="Helena Lopez">
+                </div>
+              </div>
 
-          <div class="col-md-4">
-            <label form="input-localidad">Localidad</label>
-            <input type="text" class="form-control input-bloque-persona" id="input-localidad" name="input-localidad" placeholder ="Mar del Plata">    
-          </div>
+              <div class="col-sm-4">
+                <div class="form-group">
+                  <label for="input-calle">Calle</label>
+                  <input type="text" class="form-control input-bloque-persona" id="input-calle" name="input-calle" placeholder ="Falucho" >
+                </div>
+              </div>
 
-        </form>
-        <div class="pt-4" id="resultado-personas"></div>
+              <div class="col-sm-4">
+                <div class="form-group">
+                  <label form="input-localidad">Localidad</label>
+                  <input type="text" class="form-control input-bloque-persona" id="input-localidad" name="input-localidad" placeholder ="Mar del Plata" size="50">    
+                </div>
+              </div>
+
+          </div>
+        </fieldset>
+        <div id="resultado-personas"></div>
+      </form>
       </section>
 
 
@@ -100,10 +114,14 @@ include './conexion/conexion.php';
           let valor1 = $('#input-nombre').val();
           let valor2 = $('#input-calle').val();
           let valor3 = $('#input-localidad').val();
-
           buscarDatos(valor1, valor2, valor3);
+
+
+          // buscarDatos(valor1, valor2, valor3);
+          // valor1 = $('#input-nombre').val("");
+          // valor2 = $('#input-calle').val("");
+          // valor3 = $('#input-localidad').val("");
       });
       </script>
-      
   </body>
 </html>

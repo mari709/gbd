@@ -12,7 +12,17 @@ $mostrar = mysqli_query($link,$sql);
 $counter = mysqli_num_rows($mostrar);
 
 
-if($counter<50){
+if($counter>=50){
+    echo "<div class='alert alert-warning block' role='alert'>La búsqueda arroja mas de 50 resultados. Por favor reformule la búsqueda</div>";
+
+}
+
+if($counter==0){
+echo "No hay coincidencias para esta búsqueda";
+
+}
+
+if(($counter>0) && ($counter<50)){
 echo "<div class='container'>";
 echo "<table class='table'>";
 echo "<tr>";
@@ -34,8 +44,5 @@ echo "</tr>";
 echo "</table>";
 echo "</div>";
 }
-else{
-    echo "<div class='container'><div class='alert alert-warning block' role='alert'>La busqueda arroja mas de 50 resultados</div> </div>";
-}
-
+$close = mysqli_close($link);
 ?>
