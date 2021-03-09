@@ -6,7 +6,7 @@ $name ="";
 <html lang="es">
 
 <!--head-->
-<?php include_once './vistas/head.php' ?>
+<?php include_once './vistas/my-head.php' ?>
 </head>
 
 <body>
