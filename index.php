@@ -43,44 +43,6 @@ include './conexion/conexion.php';
           </li>
         </ul>
       </nav>
-      <section class="container seccion-principal">
 
-<?php
-//consulta que muestra el nombre de la ultima calle
-$sql = "SELECT nombre, dir_calle, dir_numero from contactos
-where dir_calle LIKE 'falucho'
-order by dir_calle desc";
-
-
-$sql_hacer = mysqli_query($link,$sql); //me conecto con la BD para hacer la consulta $sql
-$num = mysqli_num_rows($sql_hacer); //almaceno en variable $num la cantidad de registros devueltos de la consulta $sql_hacer
-//echo $num;
-
-?>
-<table class="table table-striped mt-4">
-<tr>
-<td>nombre</td>
-<td>calle</td>
-<td>numero</td>  
-</tr>
-<?php
-while ($row = mysqli_fetch_assoc($sql_hacer)) {
-
-echo "<tr>";
-echo "<td>";
-  echo $row['nombre'];
-echo "</td>"; 
-echo "<td>"; 
-  echo $row['dir_calle']; 
-echo "</td>";
-echo"<td>";  
-  echo $row['dir_numero'];
-echo"</td>";
-  echo "</tr>";  
-}
-?>
-</table>
-      </div>
-      </section>
 </body>
 </html>
