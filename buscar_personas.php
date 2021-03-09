@@ -4,50 +4,20 @@ $name ="";
 ?>
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="favicon.jpg">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Buscar Personas</title>
-    <meta name="description" content="El sistema nº1 de analisis de datos de contribuyentes de América Latina">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="estilos/style.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+<!--head-->
+<?php include_once './vistas/head.php' ?>
 </head>
+
 <body>
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-        <!-- Brand -->
-        <a class="navbar-brand" href="#">
-        <img src="favicon.jpg" width="40" height="40" class="d-inline-block align-top" alt="">
-    </a>
-        <!-- Links -->
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link 1</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link 2</a>
-          </li>
-      
-          <!-- Dropdown -->
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-              Dropdown link
-            </a>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="#">Link 1</a>
-              <a class="dropdown-item" href="#">Link 2</a>
-              <a class="dropdown-item" href="#">Link 3</a>
-            </div>
-          </li>
-        </ul>
-      </nav>
+<!--navbar-->
+<?php include_once './vistas/navbar.php' ?>
       <section class="container pt-4 buscador-personas">
         <h1 class="h1-encabezado pt-4 pb-4">Buscador de personas</h1>
-        <form class="border-primary mb-3">
+      </section> 
+      <section class="container"> 
+        <form class="form-card card">
           <fieldset class=" p-4">
-            <legend class="w-auto">Buscar personas</legend>
             <div class="row">
               
               <div class="col-sm-4">
@@ -74,7 +44,7 @@ $name ="";
           </fieldset>
           </form>
           </section>
-          <div class="container" id="resultado-personas"></div> 
+          <div class="text-center container" id="resultado-personas"></div> 
       
       
       <script>
