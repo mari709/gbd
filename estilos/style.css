@@ -6,9 +6,24 @@ body {
     text-align: center;
 }
 .form-card {
-    background-color: #f1efef;
+    /* background-color: #ffa35c ; */
+    /* border-left: #bee5eb solid 5px; */
     /*background-color:#009aac;*/
 }
 label {
     font-weight: bold;
+}
+legend {
+    font-size: 1rem;
+    background-color: #f1efef;
+    margin: 2rem;
+    padding: 0.5rem;
+    border-radius: 0;
+    border: #dee2e6  1px solid;
+    /* border-bottom: 2px solid #ffa35c; */
+    text-align: center;
+
+}
+fieldset {
+    background-color: #f1efef;
 }
