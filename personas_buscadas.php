@@ -1,7 +1,6 @@
 <?php
 include './conexion/conexion.php';
 
-
 $nombre = $_POST['var1'];
 $calle = $_POST['var2'];
 $localidad = $_POST['var3'];
@@ -12,48 +11,79 @@ $counter = mysqli_num_rows($mostrar);
 
 
 if($counter>=50){
-    echo "<div class='alert alert-info' role='alert'>La búsqueda arroja mas de 50 resultados. <strong>Por favor reformule la búsqueda</strong></div>";
+    echo "<div class='alert alert-light' role='alert'>La búsqueda arroja mas de 50 resultados. <strong>Por favor reformule la búsqueda</strong></div>";
 
 }
 
 if($counter==0){
-echo "<div class='alert alert-info' role='alert'>No hay coincidencias para esta búsqueda</div>";
+echo "<div class='alert alert-light' role='alert'>No hay coincidencias para esta búsqueda</div>";
 
 }
 
 if(($counter>0) && ($counter<50)){
-echo "<div class='alert alert-info card' role='alert'>Se encontraron $counter resultados para esta búsqueda</div>";
-echo "<div class='pt-4 table-responsive'>";
-echo "<table class='table table-sm'>";
-    echo "<thead class='thead-dark'>";
+    echo "<div class='alert alert-light card' role='alert'>Se encontraron $counter resultados para esta búsqueda</div>";
+    echo "<div class='pt-4 table-responsive-sm'>";
+    echo "<table class='table table-striped table-sm align-middle'>";
+        echo "<thead class='thead-dark'>";
+            echo "<tr>";
+                echo "<th scope='col'>#</th>";
+                echo "<th scope='col'>Nombre</th>";
+                echo "<th scope='col'>Calle</th>";
+                echo "<th scope='col'>Número</th>";
+                echo "<th scope='col'>Localidad</th>";
+                echo "<th scope='col'>Ver</th>";
+                echo "<th scope='col'>Exportar</th>";
+            echo "</tr>";
+        echo "</thead>";
+        echo "<tbody>";
+
+    $nro_reg_persona = 0;
+    $id_btn_persona = 'p';
+
+
+
+    while($row = mysqli_fetch_assoc($mostrar)){
+        
+        $id_btn_persona .=((string)$nro_reg_persona);
+        //echo $id_btn_persona;
+        $nro_reg_persona++;
+
         echo "<tr>";
-            echo "<th scope='col'>#</th>";
-            echo "<th scope='col'>NOMBRE</th>";
-            echo "<th scope='col'>CALLE</th>";
-            echo "<th scope='col'>NUMERO</th>";
-            echo "<th scope='col'>LOCALIDAD</th>";
-            echo "<th scope='col'>VER</th>";
-        echo "</tr>";
-    echo "</thead>";
-    echo "<tbody>";
+            echo "<td scope='row'>$nro_reg_persona</td>";
+            echo "<td>".$row['nombre']."</td>";
+            echo "<td>".$row['dir_calle']."</td>";
+            echo "<td>".$row['dir_numero']."</td>";
+            echo "<td>".$row['localidad']."</td>";
+            echo "<td><a id='$id_btn_persona' class='btn btn-primary'><i class='bi bi-search'></i></a></td>";
+            echo "<td><a class='btn btn-success'><i class='bi bi-file-earmark-excel-fill'></i></a></td>";
+        echo "</tr>";      
 
-$nro_reg_persona = 1;
-while($row = mysqli_fetch_assoc($mostrar)){
-    echo "<tr>";
-        echo "<td scope='row'>$nro_reg_persona</td>";
-        echo "<td>".$row['nombre']."</td>";
-        echo "<td>".$row['dir_calle']."</td>";
-        echo "<td>".$row['dir_numero']."</td>";
-        echo "<td>".$row['localidad']."</td>";
-        echo "<td><a class='btn btn-primary'>ver</a></td>";
-    echo "</tr>";
-    $nro_reg_persona++;
+        echo "
+        
+
+            <script>
+            $(document).ready(function () {
+                $('#".$id_btn_persona."').click(function() {
+                    Swal.fire({
+                        html: `<h2>Ficha de datos</h2>
+                                <hr>
+                                <p><span class='ficha'>Nombre: </span>".$row['nombre']."</p>
+                                <p><span class='ficha'>Dirección: </span>".$row['dir_calle']. " " .$row['dir_numero']."</p>
+                                <p><span class='ficha'>Localidad: </span>".$row['localidad']."</p>
+                                <p><span class='ficha'>Provincia: </span>".$row['pcia']."</p>
+                                <p><span class='ficha'>Código Postal: </span>".$row['c_postal']."</p>`
+                    })
+                })
+            });
+            </script>
+        ";
+
+    }
+    echo "</tbody>";
+    echo "</table>";
+    echo "</div>";  
 }
-echo "</tbody>";
-echo "</table>";
-echo "</div>";  
-}
-$close = mysqli_close($link);
 
 
-?>
+
+$close = mysqli_close($link); ?>

@@ -4,8 +4,11 @@ body {
 
 .h1-encabezado {
     text-align: center;
+    color: #5e656b;
 }
 .form-card {
+    padding: 0 1rem 1rem;
+    background-color: #dee2e6;
     /* background-color: #ffa35c ; */
     /* border-left: #bee5eb solid 5px; */
     /*background-color:#009aac;*/
@@ -15,15 +18,22 @@ label {
 }
 legend {
     font-size: 1rem;
-    background-color: #f1efef;
-    margin: 2rem;
-    padding: 0.5rem;
+    background-color: #dee2e6;
+    margin: 0 0 2rem;
+    padding: 0.5rem 0;
     border-radius: 0;
-    border: #dee2e6  1px solid;
-    /* border-bottom: 2px solid #ffa35c; */
-    text-align: center;
+    /* border-left: #dee2e6  1px solid; */
+    /* border-bottom: 2px solid #ffa35c; */ 
+    /* text-align: center; */
 
 }
 fieldset {
     background-color: #f1efef;
+}
+#resultado-personas {
+    min-height: 100px;
+}
+
+span.ficha {
+    font-weight: bold;
 }
