@@ -39,7 +39,8 @@ if(($counter>0) && ($counter<50)){
 
     $nro_reg_persona = 0;
     $id_btn_persona = 'p';
-
+   
+    $counter = 0;
 
 
     while($row = mysqli_fetch_assoc($mostrar)){
@@ -48,13 +49,17 @@ if(($counter>0) && ($counter<50)){
         //echo $id_btn_persona;
         $nro_reg_persona++;
 
+        $counter++;
+        $btnname ='p';
+        $btnname .=$counter;
+
         echo "<tr>";
             echo "<td scope='row'>$nro_reg_persona</td>";
             echo "<td>".$row['nombre']."</td>";
             echo "<td>".$row['dir_calle']."</td>";
             echo "<td>".$row['dir_numero']."</td>";
             echo "<td>".$row['localidad']."</td>";
-            echo "<td><a id='$id_btn_persona' class='btn btn-primary'><i class='bi bi-search'></i></a></td>";
+            echo "<td><a id='$btnname' class='btn btn-primary'><i class='bi bi-search'></i></a></td>";
             echo "<td><a class='btn btn-success'><i class='bi bi-file-earmark-excel-fill'></i></a></td>";
         echo "</tr>";      
 
@@ -63,7 +68,7 @@ if(($counter>0) && ($counter<50)){
 
             <script>
             $(document).ready(function () {
-                $('#".$id_btn_persona."').click(function() {
+                $('#".$btnname."').click(function() {
                     Swal.fire({
                         html: `<h2>Ficha de datos</h2>
                                 <hr>
@@ -71,7 +76,8 @@ if(($counter>0) && ($counter<50)){
                                 <p><span class='ficha'>Dirección: </span>".$row['dir_calle']. " " .$row['dir_numero']."</p>
                                 <p><span class='ficha'>Localidad: </span>".$row['localidad']."</p>
                                 <p><span class='ficha'>Provincia: </span>".$row['pcia']."</p>
-                                <p><span class='ficha'>Código Postal: </span>".$row['c_postal']."</p>`
+                                <p><span class='ficha'>Código Postal: </span>".$row['c_postal']."</p>
+                                <input type='button' class='btn btn-secondary' value='Imprimir' onclick='javascript:window.print()' />`
                     })
                 })
             });
@@ -82,6 +88,7 @@ if(($counter>0) && ($counter<50)){
     echo "</tbody>";
     echo "</table>";
     echo "</div>";  
+    $btnname='p';
 }
 
 
