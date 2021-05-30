@@ -37,3 +37,6 @@ fieldset {
 span.ficha {
     font-weight: bold;
 }
+.ranking-a__number, .ranking-b__number {
+    width: 5rem;
+}

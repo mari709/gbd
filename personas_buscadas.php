@@ -60,7 +60,7 @@ if(($counter>0) && ($counter<50)){
             echo "<td>".$row['dir_numero']."</td>";
             echo "<td>".$row['localidad']."</td>";
             echo "<td><a id='$btnname' class='btn btn-primary'><i class='bi bi-search'></i></a></td>";
-            echo "<td><a class='btn btn-success'><i class='bi bi-file-earmark-excel-fill'></i></a></td>";
+            echo "<td><a href='excel_personas.php?pnombre=$nombre&pcalle=$calle&plocalidad=$localidad' class='btn btn-success'><i class='bi bi-file-earmark-excel-fill'></i></a></td>";
         echo "</tr>";      
 
         echo "

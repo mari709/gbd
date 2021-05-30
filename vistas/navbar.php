@@ -9,7 +9,7 @@
             <a class="nav-link" href="buscar_personas.php">Buscar Personas</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Consulta 2</a>
+            <a class="nav-link" href="ranking_calles.php">Ranking de Calles</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Consulta 3</a>
