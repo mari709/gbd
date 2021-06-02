@@ -40,3 +40,7 @@ span.ficha {
 .ranking-a__number, .ranking-b__number {
     width: 5rem;
 }
+
+a.nav-link, .navbar-dark .navbar-nav .nav-link {
+    color: #fff;
+}

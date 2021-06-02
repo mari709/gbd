@@ -22,7 +22,7 @@ $name ="";
             <div class="col-sm-4">
               <div class="form-group">
                 <label for="input-nombre">Nombre</label>
-                <input type="text" class="form-control input-bloque-persona" id="input-nombre" name="input-nombre"  placeholder ="Sol" maxlength="50">
+                <input type="text" class="form-control input-bloque-persona" id="input-nombre" name="input-nombre"  placeholder ="Laura" maxlength="50">
               </div>
             </div>
 

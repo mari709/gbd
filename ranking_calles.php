@@ -23,20 +23,33 @@ $altura_maxima = $sql_exec_datos['dir_numero'];
       </section>
 
 <?php 
-echo "<label>Altura A</label>";
-echo "<input type='range' value='0' min='0' max='".$altura_maxima."' onchange='updTextmin(this.value);'>";
-echo "<input type='number' class='ranking-a__number' step='100' min='0' id='input_min_number' value='0' oninput='validity.valid||(value='')';>";
+echo "
+<div class='container'>
+        <div class='row'>
+                <div class='col-md-4'></div>
+                <div class='col-md-4'>
+                        <label>Altura A</label>
+                        <input type='range' value='0' min='0' max='".$altura_maxima."' onchange='updTextmin(this.value);'>
+                        <input type='number' class='ranking-a__number' step='100' min='0' id='input_min_number' value='0' oninput='validity.valid||(value='')';>
+                </div>
+                <div class='col-md-4'>
+                        <label>Altura B</label>
+                        <input type='range' value='".$altura_maxima."' name='max_range' min='0' max='".$altura_maxima."' onchange='updTextmax(this.value);'>
+                        <input type='number' class='ranking-b__number' step='1' id='input_max_number' min='0' value='".$altura_maxima."' oninput='validity.valid||(value='')';>
+                </div>
+                <div class='col-md-4'>
+";?>
+                        <input type="button" class="btn btn-primary btn-block" value="mostrar" href="javascript:;" onclick="realizaProceso($('#input_min_number').val(), $('#input_max_number').val());return false;">   
+                </div>
+        </div>
+        <div class='row'>
+                <div class='col-md-4'></div>     
+                <div id="resultado"></div>
+                <div id="resultado2"></div>
+                </div>
+        </div>
+</div>
 
-echo "<label>Altura B</label>";
-echo "<input type='range' value='".$altura_maxima."' name='max_range' min='0' max='".$altura_maxima."' onchange='updTextmax(this.value);'>";
-echo "<input type='number' class='ranking-b__number' step='1' id='input_max_number' min='0' value='".$altura_maxima."' oninput='validity.valid||(value='')';>";
-?>
-
-<input type="button" class="btn btn-primary" value="mostrar" href="javascript:;" onclick="realizaProceso($('#input_min_number').val(), $('#input_max_number').val());return false;">
-
-
-<div id="resultado"></div>
-<div id="resultado2"></div>
 
 <script>
 function updTextmin(val) {
