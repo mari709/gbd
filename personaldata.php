@@ -13,29 +13,26 @@ $sqlquery = "select * from contactos where localidad like '".$valor1."' and dir_
 
 $view2 ='';
 $view2 .="
-<link rel='stylesheet' type='text/css' href='css/estilo.css'> 
-<header class='principal'>
-<center>
-<h1>LISTADO DE CONTRIBUYENTES CALLE 
+<div class='principal'>
+<h3>Listado de contribuyentes calle 
 ";
 $view2 .=$valor2; 
-$view2 .= " ENTRE LAS ALTURAS ";
+$view2 .= " entre las alturas ";
 $view2 .= $valor3;
 $view2 .= " ";
 $view2 .= "y";
 $view2 .= " ";
 $view2 .= $valor4;
-$view2 .= "</h1></center></header>";
-$view2 .="<table class='tabla_fondo'>";
-$view2 .= "<tr><td><center><a href ='importoexcell.php?v1=".$valor1."&v2=".$valor2."&v3=".$valor3."&v4=".$valor4."' class= 'btn btn-success btn-sm'>EXPORTAR LISTADO A EXCEL</a></center></td></tr>";
+$view2 .= "</h3></div>";
+$view2 .= "<a href ='importoexcell.php?v1=".$valor1."&v2=".$valor2."&v3=".$valor3."&v4=".$valor4."' class= 'btn btn-success btn-sm'>EXPORTAR LISTADO A EXCEL</a>";
 $view2 .= "<tr><td>";
-$view2 .="<table border ='1' class='tabla_datos'>
-<thead>
-<tr id='titulo'>
-<td>NOMBRES</td>
-<td>FICHAS</td>
-</tr>
-</thead>
+$view2 .="<table>
+  <thead>
+    <tr id='titulo'>
+      <td>NOMBRES</td>
+      <td>FICHAS</td>
+    </tr>
+  </thead>
 ";
 
 $show = mysqli_query($link,$sqlquery);

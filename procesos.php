@@ -43,27 +43,21 @@ $hacer2 = mysqli_query($link,$sql2);
 $maxium_counter = mysqli_fetch_assoc($hacer2);
 $rowcount = mysqli_num_rows($hacer2);
 $mc_echo =  $maxium_counter['counter']; 
-$view =
-"<center>
-";
-$view .= "<br>";
 
-$view .="<table class='tabla_fondo'>";
-$view .="<tr><td><center><a href ='importoexcell2.php?data1=$altura_uno&data2=$altura_dos' class= 'btn btn-success btn-sm'>EXPORTAR LISTADO A EXCEL</a></center></td></tr>"; 
-$view .="<tr><td>";
-//tabla visible
+$view = "";
+
+$view .="<a href ='listado-ranking-calles.php?data1=$altura_uno&data2=$altura_dos' class= 'btn btn-success btn-sm'>EXPORTAR LISTADO A EXCEL</a>"; 
 $view .="
-<table  class='tabla_datos'>
-<thead>
-<tr id='titulo'>
-<td>PUESTO</td>
-<td>CALLE</td>
-<td>COMPARACION</td>
-<td>REGISTROS</td>
-<td>LOCALIDAD</td>
-<td>LISTADOS</td>
-</tr>
-</thead>
+<table>
+        <thead>
+                <tr id='titulo'>
+                        <td>PUESTO</td>
+                        <td>CALLE</td>
+                        <td>REGISTROS</td>
+                        <td>LOCALIDAD</td>
+                        <td>LISTADOS</td>
+                </tr>
+        </thead>
 ";
 while($fila = mysqli_fetch_assoc($hacer)){
 
@@ -73,10 +67,6 @@ while($fila = mysqli_fetch_assoc($hacer)){
     $view .= $position_counter;
     $view .="</td><td>";
     $view .=$fila['dir_calle'];
-    $view .="</td><td>";
-    $view .="<img src ='./pics/cubo.jpg' width =";
-    $view .= $ppl_d;
-    $view .=" height = 15>";
     $view .="</td><td>";
     $view .= $fila['counter'];
     $view .="</td><td>";
@@ -118,11 +108,9 @@ while($fila = mysqli_fetch_assoc($hacer)){
 $view .="</td></tr>";
 $position_counter ++;
 }
-$view .="</table></center>";
-//fin tabla visible
-
-$view .="</td></tr>";
 $view .="</table>";
+
+
 
 echo $view;
 }
