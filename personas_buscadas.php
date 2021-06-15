@@ -21,7 +21,7 @@ echo "<div class='alert alert-light' role='alert'>No hay coincidencias para esta
 }
 
 if(($counter>0) && ($counter<50)){
-    echo "<div class='alert alert-light card' role='alert'>Se encontraron $counter resultados para esta búsqueda</div>";
+    echo "<span class='alert alert-light card' role='alert'>Se encontraron $counter resultados para esta búsqueda</span><span><a href='excel_personas.php?pnombre=$nombre&pcalle=$calle&plocalidad=$localidad' class='btn btn-success'><i class='bi bi-file-earmark-excel-fill'> Exportar lista</i></a></span>";
     echo "<div class='pt-4 table-responsive-sm'>";
     echo "<table class='table table-striped table-sm align-middle'>";
         echo "<thead class='thead-dark'>";
@@ -32,7 +32,6 @@ if(($counter>0) && ($counter<50)){
                 echo "<th scope='col'>Número</th>";
                 echo "<th scope='col'>Localidad</th>";
                 echo "<th scope='col'>Ver</th>";
-                echo "<th scope='col'>Exportar</th>";
             echo "</tr>";
         echo "</thead>";
         echo "<tbody>";
@@ -60,7 +59,6 @@ if(($counter>0) && ($counter<50)){
             echo "<td>".$row['dir_numero']."</td>";
             echo "<td>".$row['localidad']."</td>";
             echo "<td><a id='$btnname' class='btn btn-primary'><i class='bi bi-search'></i></a></td>";
-            echo "<td><a href='excel_personas.php?pnombre=$nombre&pcalle=$calle&plocalidad=$localidad' class='btn btn-success'><i class='bi bi-file-earmark-excel-fill'></i></a></td>";
         echo "</tr>";      
 
         echo "
