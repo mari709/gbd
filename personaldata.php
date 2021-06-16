@@ -13,8 +13,7 @@ $sqlquery = "select * from contactos where localidad like '".$valor1."' and dir_
 
 $view2 ='';
 $view2 .="
-<div class='principal'>
-<h3>Listado de contribuyentes calle 
+<p>Listado de contribuyentes calle 
 ";
 $view2 .=$valor2; 
 $view2 .= " entre las alturas ";
@@ -23,7 +22,7 @@ $view2 .= " ";
 $view2 .= "y";
 $view2 .= " ";
 $view2 .= $valor4;
-$view2 .= "</h3></div>";
+$view2 .= "</p>";
 $view2 .= "<a href ='importoexcell.php?v1=".$valor1."&v2=".$valor2."&v3=".$valor3."&v4=".$valor4."' class= 'btn btn-success btn-sm'>EXPORTAR LISTADO A EXCEL</a>";
 $view2 .= "<tr><td>";
 $view2 .="<table>
@@ -61,7 +60,6 @@ $view2 .="
 	$(document).ready(function () {
 		$('#".$btn_alert_name."').click(function(){
       Swal.fire({html: `<h1>FICHA DE DATOS</h1><hr>
-        <center>
 <table>
 <tr>
 <td>NOMBRE :</td>
@@ -99,7 +97,6 @@ $view2 .="
 <td>".$row['c_postal']."</td>
 </tr>
 </table></div>
-</center>
 <br>
        <input type='button' class='btn btn-primary btn-sm'value='Imprimir' onclick='javascript:window.print()' />
         `, });    
