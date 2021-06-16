@@ -19,40 +19,55 @@ $altura_maxima = $sql_exec_datos['dir_numero'];
 <!--navbar-->
 <?php include_once './vistas/navbar.php' ?>
       <section class="container pt-4 buscador-personas">
-        <h1 class="h1-encabezado pt-4 pb-4">Ranking de Calles</h1>
+        <h1 class="h1-encabezado pt-4 pb-4">Ranking 10 de Calles</h1>
       </section>
 
 <?php 
 echo "
-<div class='container'>
-        <div class='row align-items-center  text-center'>
-                <div class='col-md-4'>
-                        <label>Altura A</label>
-                        <input type='range' value='0' min='0' max='".$altura_maxima."' onchange='updTextmin(this.value);'>
-                        <input type='number' class='ranking-a__number' step='100' min='0' id='input_min_number' value='0' oninput='validity.valid||(value='')';>
+<div class='contenedor-grilla m-4'>";
+?>
+<!-- PASO 1 --> 
+         <?php  
+         echo"     
+        <div class='card text-center paso1'>
+                <div class='card-header'>
+                        <h4 class='pasos'>Paso 1</h4>
                 </div>
-        </div>
-        <div class='row align-items-center text-center'>  
-                <div class='col-md-4'>
-                        <label>Altura B</label>
-                        <input type='range' value='".$altura_maxima."' name='max_range' min='0' max='".$altura_maxima."' onchange='updTextmax(this.value);'>
-                        <input type='number' class='ranking-b__number' step='1' id='input_max_number' min='0' value='".$altura_maxima."' oninput='validity.valid||(value='')';>
-                </div>
-                <div class='col-md-8'></div>
-        </div>
-";?>
-        <div class="row align-items-center">
-                <div class='col-md-4'>
-                        <input type="button" class="btn btn-primary btn-block" value="mostrar" href="javascript:;" onclick="realizaProceso($('#input_min_number').val(), $('#input_max_number').val());return false;">   
-                </div>
-        </div>
-        <div class='row'>
-                <div class='col-md-4'>
-                        <div id='resultado'></div>
-                        <div id="resultado2"></div>
-                </div>     
+                <div class='card-body'>
+                        <div>
+                                <label>Altura A</label>
+                                <input type='range' value='0' min='0' max='".$altura_maxima."' onchange='updTextmin(this.value);'>
+                                <input type='number' class='ranking-a__number' step='100' min='0' id='input_min_number' value='0' oninput='validity.valid||(value='')';>
+                        </div>
+                        <div>
+                                <label>Altura B</label>
+                                <input type='range' value='".$altura_maxima."' name='max_range' min='0' max='".$altura_maxima."' onchange='updTextmax(this.value);'>
+                                <input type='number' class='ranking-b__number' step='1' id='input_max_number' min='0' value='".$altura_maxima."' oninput='validity.valid||(value='')';>
+                        </div>
 
+";?>
+                        <input type="button" class="btn btn-primary" value="mostrar" href="javascript:;" onclick="realizaProceso($('#input_min_number').val(), $('#input_max_number').val());return false;">   
+                </div>
         </div>
+<!-- PASO 2 --> 
+                <div class='card paso2'>
+                        <div class='card-header'>
+                        <h4 class="pasos">Paso 2</h4>
+                        </div>
+                        <div class='card-body'>
+                        <div id="resultado"></div>
+                        </div>
+                </div>
+<!-- PASO 3 --> 
+
+                <div class="card paso3">
+                        <div class='card-header'>
+                                <h4 class="pasos">Paso 3</h4>
+                        </div>
+                        <div class='card-body'>
+                        <div id="resultado2"></div>
+                        </div>
+                </div>
 </div>
 
 

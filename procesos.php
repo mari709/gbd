@@ -48,14 +48,15 @@ $view = "";
 
 $view .="<a href ='listado-ranking-calles.php?data1=$altura_uno&data2=$altura_dos' class= 'btn btn-success btn-sm'>EXPORTAR LISTADO A EXCEL</a>"; 
 $view .="
-<table>
-        <thead>
+<div class='pt-4 table-responsive-sm'>
+<table class='table table-striped table-sm align-middle'>
+        <thead class='thead-dark'>
                 <tr id='titulo'>
-                        <td>PUESTO</td>
-                        <td>CALLE</td>
-                        <td>REGISTROS</td>
-                        <td>LOCALIDAD</td>
-                        <td>LISTADOS</td>
+                        <th>#</th>
+                        <th>CALLE</th>
+                        <th>REGISTROS</th>
+                        <th>LOCALIDAD</th>
+                        <th>LISTADOS</th>
                 </tr>
         </thead>
 ";
@@ -72,8 +73,8 @@ while($fila = mysqli_fetch_assoc($hacer)){
     $view .="</td><td>";
     $view .=$fila['localidad'];
     $view .="</td><td>";
-    $view .="<input type='button'class= 'btn btn-primary btn-sm' href='javascript:;' onclick='muestralista(";
-    $view .='"';
+    $view .="<a class= 'btn btn-primary btn-sm' href='javascript:;' onclick='muestralista(";
+    $view .='"';           
     $view .= $fila['localidad'];
     $view .='","';
     $view .= $fila['dir_calle'];
@@ -82,7 +83,7 @@ while($fila = mysqli_fetch_assoc($hacer)){
     $view .= '","';
     $view .= $altura_dos;
     $view .= '"';
-    $view .=");return false' value = 'mostrar'/>";
+    $view .=");return false' ><i class='bi bi-search'></i></a>";
     $view .="
             <script>
             function muestralista(p1,p2,p3,p4){
