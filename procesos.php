@@ -34,7 +34,6 @@ ORDER BY `counter`  DESC limit 1) as cuenta";
 
 
 
-//$ancho_cubo = 200;
 $hacer = mysqli_query($link,$sql);
 $datacounter = mysqli_num_rows($hacer);
 

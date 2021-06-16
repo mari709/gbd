@@ -12,24 +12,24 @@ $sqlquery = "select * from contactos where localidad like '".$valor1."' and dir_
 
 
 $view2 ='';
+$view2 .= "<a href ='importoexcell.php?v1=".$valor1."&v2=".$valor2."&v3=".$valor3."&v4=".$valor4."' class= 'btn btn-success btn-sm'>EXPORTAR LISTADO A EXCEL</a>";
 $view2 .="
-<p>Listado de contribuyentes calle 
+<p>Listado de <b>contribuyentes</b> calle <b>
 ";
 $view2 .=$valor2; 
-$view2 .= " entre las alturas ";
+$view2 .= "</b> entre las alturas <b>";
 $view2 .= $valor3;
-$view2 .= " ";
+$view2 .= "</b> ";
 $view2 .= "y";
-$view2 .= " ";
+$view2 .= " <b>";
 $view2 .= $valor4;
-$view2 .= "</p>";
-$view2 .= "<a href ='importoexcell.php?v1=".$valor1."&v2=".$valor2."&v3=".$valor3."&v4=".$valor4."' class= 'btn btn-success btn-sm'>EXPORTAR LISTADO A EXCEL</a>";
-$view2 .= "<tr><td>";
-$view2 .="<table>
-  <thead>
+$view2 .= "</b></p>";
+
+$view2 .="<table class='table table-striped table-sm align-middle'>
+  <thead class='thead-dark'>
     <tr id='titulo'>
-      <td>NOMBRES</td>
-      <td>FICHAS</td>
+      <th>NOMBRE</th>
+      <th>FICHAS</th>
     </tr>
   </thead>
 ";
@@ -51,7 +51,7 @@ $view2 .= "</td>";
 $view2 .= "<td>";
 $view2 .="<button type='button' id='";
 $view2 .= $btn_alert_name;
-$view2 .="'class='btn btn-primary btn-sm'>mostrar";
+$view2 .="'class='btn btn-primary btn-sm'><i class='bi bi-search'></i>";
 $view2 .="</button>";
 $view2 .= "</td>";
 $view2 .= "<tr>";

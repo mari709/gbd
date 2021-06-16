@@ -15,28 +15,30 @@ $name ="";
       <section class="container pt-4 buscador-personas">
         <h1 class="h1-encabezado pt-4 pb-4">Buscador de personas</h1>
       </section>
-      <section class="container"> 
-        <form class="form-card card">
-            <legend class="w-auto">Completa total o parcialmente uno o más valores para realizar la consulta</legend>
-            <div class="row pl-4 pr-4">
-            <div class="col-sm-4">
-              <div class="form-group">
+      
+      <section class="container mt-4"> 
+        <form class='card'>
+          <div class='card-header'>
+            <h6>Completa total o parcialmente uno o más valores para realizar la consulta</h6>
+          </div>
+          <div class='card-body'>
+            <div class="form-group">
+              <div class="row pl-4 pr-4">
+                <div class="col-sm-4">
                 <label for="input-nombre">Nombre</label>
                 <input type="text" class="form-control input-bloque-persona" id="input-nombre" name="input-nombre"  placeholder ="Laura" maxlength="50">
               </div>
-            </div>
-
-            <div class="col-sm-4">
-              <div class="form-group">
-                <label for="input-calle">Calle</label>
-                <input type="text" class="form-control input-bloque-persona" id="input-calle" name="input-calle" placeholder ="Falucho" maxlength="50" >
+              <div class="col-sm-4">
+                <div class="form-group">
+                  <label for="input-calle">Calle</label>
+                  <input type="text" class="form-control input-bloque-persona" id="input-calle" name="input-calle" placeholder ="Falucho" maxlength="50" >
+                </div>
               </div>
-            </div>
-
-            <div class="col-sm-4">
-              <div class="form-group">
-                <label for="input-localidad">Localidad</label>
-                <input type="text" class="form-control input-bloque-persona" id="input-localidad" name="input-localidad" placeholder ="Mar del Plata" maxlength="50">    
+              <div class="col-sm-4">
+                <div class="form-group">
+                  <label for="input-localidad">Localidad</label>
+                  <input type="text" class="form-control input-bloque-persona" id="input-localidad" name="input-localidad" placeholder ="Mar del Plata" maxlength="50">    
+                </div>
               </div>
             </div>
           </div>
