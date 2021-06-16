@@ -8,7 +8,7 @@ body {
 }
 .form-card {
     padding: 0 1rem 1rem;
-    background-color: #dee2e6;
+    background-color: #f7f7f7;
     /* background-color: #ffa35c ; */
     /* border-left: #bee5eb solid 5px; */
     /*background-color:#009aac;*/
@@ -43,4 +43,36 @@ span.ficha {
 
 a.nav-link, .navbar-dark .navbar-nav .nav-link {
     color: #fff;
+}
+.paso1 {
+    grid-area: "col-1";
+}
+.paso2 {
+    grid-area: "col-2";
+}
+.paso3 {
+    grid-area: "col-3";
+}
+.contenedor-grilla {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-areas:
+    "col-1"
+    "col-2"
+    "col-3"
+}
+
+@media (min-width: 500px) {
+    .contenedor-grilla  {
+        grid-template-columns: 2fr 3fr 2fr;
+        grid-template-areas: 
+        "col-1 col-2 col-3"
+        "col-1 col-2 col-3"
+        "col-1 col-2 col-3";
+    }
+}
+
+.pasos {
+    color: #5e656b;
+    text-align:center;
 }
