@@ -12,7 +12,7 @@
             <a class="nav-link" href="ranking_calles.php">Ranking de Calles</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Consulta 3</a>
+            <a class="nav-link" href="buscar_calle.php">Buscar por calle</a>
           </li>
         </ul>
       </nav>

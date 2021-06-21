@@ -9,7 +9,7 @@ include './conexion/conexion.php';
     <link rel="shortcut icon" href="favicon.jpg">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Sistema de Análisis de Datos</title>
-    <meta name="description" content="El sistema nº1 de analisis de datos de contribuyentes de América Latina">
+    <meta name="description" content="El sistema nº1 de análisis de datos de contribuyentes de América Latina">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="estilos/style.css">
 
