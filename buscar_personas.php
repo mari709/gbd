@@ -1,6 +1,8 @@
 <?php
 include './conexion/conexion.php';
-$name ="";
+session_start();
+if(isset(($_SESSION['status']))){
+
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -78,3 +80,10 @@ $name ="";
       </script>
   </body>
 </html>
+<?PHP
+}
+else{
+  header('Location:index.php');
+}
+
+?>

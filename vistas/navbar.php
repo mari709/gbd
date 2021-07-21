@@ -14,5 +14,14 @@
           <li class="nav-item">
             <a class="nav-link" href="buscar_calle.php">Buscar por calle</a>
           </li>
+          <li class="nav-item">
+          <form action="./logout.php" method="POST">
+
+<button type="submit" class="btn btn-warning btn-sm">SALIR</button><br>
+</form>
+
+
+           <!-- <button>sali de aca</button>-->
+          </li>
         </ul>
       </nav>

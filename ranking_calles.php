@@ -1,5 +1,8 @@
 <?php
 include './conexion/conexion.php';
+session_start();
+if(isset(($_SESSION['status']))){
+        
 //$error_reporting = E_ALL & ~E_NOTICE;
 $sql = "SELECT dir_numero from contactos order by dir_numero DESC limit 1";
 $sql_exec = mysqli_query($link, $sql);
@@ -79,3 +82,10 @@ function updTextmax(val) {
         document.getElementById('input_max_number').value=val; 
 }
 </script>
+<?PHP
+}
+else{
+  header('Location:index.php');
+}
+
+?>
