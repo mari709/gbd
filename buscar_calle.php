@@ -1,12 +1,15 @@
 <?php
 include './conexion/conexion.php';
-$name ="";
+
+session_start();
+if(isset(($_SESSION['status']))){
+
 ?>
 <!DOCTYPE html>
 <html lang="es">
-
 <!--head-->
 <?php include_once './vistas/my-head.php' ?>
+<script src= "js/escucha_calle.js"></script>
 </head>
 
 <body>
@@ -22,8 +25,15 @@ $name ="";
 
 
       <div class="text-center container" id="resultado-calle"></div> 
-
+      <div class="text-center container" id="informe"></div>
 
 
     </body>
 </html>
+<?PHP
+}
+else{
+  header('Location:index.php');
+}
+
+?>
