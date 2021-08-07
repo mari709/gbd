@@ -11,7 +11,7 @@ $correct_password = "1234ar";
 if(($post_user==$correct_user)&&($post_pass==$correct_password)){
   
     $_SESSION['status'] = 'marina';
-    //echo "logged";     
+        
     header('Location:./buscar_personas.php');
 
 }
