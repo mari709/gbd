@@ -108,7 +108,7 @@ echo "<p class = 'text'>Ingrese mas letras por favor.Escriba el nombre completo 
         
 }
 else{
-  header('Location:index.php');
+  header('Location:login.php');
 }
 
 ?>

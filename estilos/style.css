@@ -76,3 +76,7 @@ a.nav-link, .navbar-dark .navbar-nav .nav-link {
     color: #5e656b;
     text-align:center;
 }
+
+.btn.btn-primary {
+    text-transform: uppercase;
+}

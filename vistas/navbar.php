@@ -1,10 +1,13 @@
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
         <!-- Brand -->
         <a class="navbar-brand" href="./index.php">
-        <img src="favicon.jpg" width="100" height="100" class="d-inline-block align-top" alt="">
+        <img width="50" height="50" src="icons8-lambda-100.png"/>
     </a>
         <!-- Links -->
         <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" href="./index.php">Inicio</a>
+          </li>
           <li class="nav-item">
             <a class="nav-link" href="buscar_personas.php">Buscar Personas</a>
           </li>
@@ -16,11 +19,8 @@
           </li>
           <li class="nav-item">
           <form action="./logout.php" method="POST">
-
-<button type="submit" class="btn btn-warning btn-sm">SALIR</button><br>
-</form>
-
-
+        <button class="btn">SALIR</button>
+        </form>
            <!-- <button>sali de aca</button>-->
           </li>
         </ul>
