@@ -27,7 +27,7 @@ if(($sql_res>0)&&($sql_res<100))
 {
 
 $view4.="<table border ='1' class='tabla_fondo'>";
-$view4.="<tr><td><center><a href ='importoexcell4.php?data1=$calle&data2=$menor&data3=$mayor' class= 'btn btn-success btn-sm'>EXPORTAR LISTADO A EXCEL</a></center></td></tr>";
+$view4.="<tr><td><a href ='importoexcell4.php?data1=$calle&data2=$menor&data3=$mayor' class= 'btn btn-success btn-sm'><i class='bi bi-file-earmark-excel-fill'> Exportar lista a Excel</i></a></td></tr>";
 $view4.="<tr><td>";
 //comienza tabla visible  
 $view4.="<table border=1 class='tabla_datos' style='width:800px'>

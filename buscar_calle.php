@@ -24,7 +24,7 @@ if(isset(($_SESSION['status']))){
       </div>
 
 
-      <div class="text-center container" id="resultado-calle"></div> 
+      <div class="text-left container" id="resultado-calle"></div> 
       <div class="text-center container" id="informe"></div>
 
 

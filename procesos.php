@@ -45,7 +45,7 @@ $mc_echo =  $maxium_counter['counter'];
 
 $view = "";
 
-$view .="<a href ='listado-ranking-calles.php?data1=$altura_uno&data2=$altura_dos' class= 'btn btn-success btn-sm'>EXPORTAR LISTADO A EXCEL</a>"; 
+$view .="<a href ='lista-ranking-calles.php?data1=$altura_uno&data2=$altura_dos' class= 'btn btn-success btn-sm'><i class='bi bi-file-earmark-excel-fill'> Exportar lista a Excel</i></a>"; 
 $view .="
 <div class='pt-4 table-responsive-sm'>
 <table class='table table-striped table-sm align-middle'>
@@ -55,7 +55,7 @@ $view .="
                         <th>CALLE</th>
                         <th>REGISTROS</th>
                         <th>LOCALIDAD</th>
-                        <th>LISTADOS</th>
+                        <th>listaS</th>
                 </tr>
         </thead>
 ";

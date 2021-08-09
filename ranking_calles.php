@@ -22,7 +22,7 @@ $altura_maxima = $sql_exec_datos['dir_numero'];
 <!--navbar-->
 <?php include_once './vistas/navbar.php' ?>
       <section class="container pt-4 buscador-personas">
-        <h1 class="h1-encabezado pt-4 pb-4">Ranking 10 de Calles</h1>
+        <h1 class="h1-encabezado pt-4 pb-4">Ranking de calles con más contribuyentes</h1>
       </section>
 
 <?php 

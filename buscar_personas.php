@@ -19,10 +19,8 @@ if(isset(($_SESSION['status']))){
       </section>
       
       <section class="container mt-4"> 
-        <form class='card'>
-          <div class='card-header'>
-            <h6>Completa total o parcialmente uno o más valores para realizar la consulta</h6>
-          </div>
+        <form class='card p-3'>
+            <h5>Completa total o parcialmente 1 o más campos para realizar la consulta</h5>
           <div class='card-body'>
             <div class="form-group">
               <div class="row pl-4 pr-4">

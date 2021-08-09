@@ -12,9 +12,9 @@ $sqlquery = "select * from contactos where localidad like '".$valor1."' and dir_
 
 
 $view2 ='';
-$view2 .= "<a href ='importoexcell.php?v1=".$valor1."&v2=".$valor2."&v3=".$valor3."&v4=".$valor4."' class= 'btn btn-success btn-sm'>EXPORTAR LISTADO A EXCEL</a>";
+$view2 .= "<a href ='importoexcell.php?v1=".$valor1."&v2=".$valor2."&v3=".$valor3."&v4=".$valor4."' class= 'btn btn-success btn-sm'><i class='bi bi-file-earmark-excel-fill'> Exportar lista a Excel</i></a>";
 $view2 .="
-<p>Listado de <b>contribuyentes</b> calle <b>
+<p>lista de <b>contribuyentes</b> calle <b>
 ";
 $view2 .=$valor2; 
 $view2 .= "</b> entre las alturas <b>";

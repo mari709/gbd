@@ -21,7 +21,7 @@ echo "<div class='alert alert-light' role='alert'>No hay coincidencias para esta
 }
 
 if(($counter>0) && ($counter<50)){
-    echo "<span class='alert alert-light card' role='alert'>Se encontraron $counter resultados para esta búsqueda</span><span><a href='excel_personas.php?pnombre=$nombre&pcalle=$calle&plocalidad=$localidad' class='btn btn-success'><i class='bi bi-file-earmark-excel-fill'> Exportar lista</i></a></span>";
+    echo "<span class='alert alert-light card' role='alert'>Se encontraron $counter resultados para esta búsqueda</span><span><a href='excel_personas.php?pnombre=$nombre&pcalle=$calle&plocalidad=$localidad' class='btn btn-success'><i class='bi bi-file-earmark-excel-fill'> Exportar lista a Excel</i></a></span>";
     echo "<div class='pt-4 table-responsive-sm'>";
     echo "<table class='table table-striped table-sm align-middle'>";
         echo "<thead class='thead-dark'>";
