@@ -76,7 +76,10 @@ a.nav-link, .navbar-dark .navbar-nav .nav-link {
     color: #5e656b;
     text-align:center;
 }
+.lambdaweb-title {
+    font-family: 'Roboto', sans-serif;
+  }
 
-.btn.btn-primary {
-    text-transform: uppercase;
-}
+  .bg-dark {
+    background-color: #2b7bc2 !important;
+  }

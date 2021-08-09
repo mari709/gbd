@@ -4,7 +4,8 @@
     <link rel="shortcut icon" href="favicon.jpg">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Buscar Personas</title>
-    <meta name="description" content="El sistema nº1 de analisis de datos de contribuyentes de América Latina">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Lambda Web - El sistema nº1 de analisis de datos de contribuyentes de América Latina">
     <link rel="stylesheet" href="estilos/mis-estilos.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

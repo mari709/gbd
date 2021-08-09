@@ -13,8 +13,9 @@ session_start();
 
   <body class="text-center">
     <form class="form-signin" action = "access.php" method="post">
-    <img src="icons8-lambda-100.png"/>
+    <img src="favicon.png"/>
       <h2 class="m-3 lambdaweb-title">Lambda Web</h2>
+      <h6 class="mb-3"><br></h6>
       <label for="username" class="sr-only">Nombre de usuario</label>
       <input type="text" id="username" class="form-control mb-3" placeholder="Nombre de usuario" required autofocus name="user" >
       <label for="inputPassword" class="sr-only">Contraseña</label>
