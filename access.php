@@ -5,8 +5,8 @@ if(isset($_POST['user'])){
 session_start();
 $post_user = $_POST['user'];
 $post_pass = $_POST['password'];
-$correct_user = "admin";
-$correct_password = "1234abcd";
+$correct_user = "USUARIO";
+$correct_password = "CONTRASEÑA";
 
 if(($post_user==$correct_user)&&($post_pass==$correct_password)){
   
