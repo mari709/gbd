@@ -44,6 +44,10 @@ span.ficha {
 a.nav-link, .navbar-dark .navbar-nav .nav-link {
     color: #fff;
 }
+#card1-resultado, #card2-resultado{
+    background-color: transparent;
+    border: none;
+}
 .paso1 {
     grid-area: "col-1";
 }
@@ -55,7 +59,7 @@ a.nav-link, .navbar-dark .navbar-nav .nav-link {
 }
 .contenedor-grilla {
     display: grid;
-    grid-gap: 20px;
+    grid-gap: 15px;
     grid-template-areas:
     "col-1"
     "col-2"
@@ -64,11 +68,17 @@ a.nav-link, .navbar-dark .navbar-nav .nav-link {
 
 @media (min-width: 500px) {
     .contenedor-grilla  {
-        grid-template-columns: 2fr 3fr 2fr;
+      grid-template-columns: 50% 50%;
         grid-template-areas: 
-        "col-1 col-2 col-3"
-        "col-1 col-2 col-3"
-        "col-1 col-2 col-3";
+        "col-1 col-2"
+        
+        "col-3 col-3"
+        
+ /*        grid-template-areas:
+        "col-1"
+        "col-2"
+        "col-3" */
+
     }
 }
 

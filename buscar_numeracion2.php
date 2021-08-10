@@ -26,11 +26,13 @@ $sql_res = mysqli_num_rows($sql_mostrar);
 if(($sql_res>0)&&($sql_res<100))
 {
 
-$view4.="<table border ='1' class='tabla_fondo'>";
-$view4.="<tr><td><a href ='exportarexcell4.php?data1=$calle&data2=$menor&data3=$mayor' class= 'btn btn-success btn-sm'><i class='bi bi-file-earmark-excel-fill'> Exportar lista a Excel</i></a></td></tr>";
+$view4.="<table mx-auto table table-striped table-sm ";
+$view4.="<tr><td class=' mx-auto' ><a href ='exportarexcell4.php?data1=$calle&data2=$menor&data3=$mayor' class= 'btn btn-success btn-sm'><i class='bi bi-file-earmark-excel-fill mx-auto'> Exportar lista a Excel</i></a></td></tr>";
 $view4.="<tr><td>";
-//comienza tabla visible  
-$view4.="<table border=1 class='tabla_datos' style='width:800px'>
+$view4.="</table>";
+
+
+$view4.="<table class='mx-auto table table-striped table-sm align-middle'>
 <thead>
 <tr id='titulo'>
 	<td>NOMBRE</td>
@@ -67,7 +69,6 @@ $view4.="<tr>
 		$('#".$btnname."').click(function(){
       Swal.fire({
         html: `<h1>FICHA DE DATOS</h1><hr>
-        <center>
        <table>
       
        <tr>
@@ -120,7 +121,6 @@ $view4.="<tr>
        <tr>
        </tr>
        </table>
-       </center>
        <br>
        <input type='button' class='btn btn-primary btn-sm'value='Imprimir' onclick='javascript:window.print()' />
         `,

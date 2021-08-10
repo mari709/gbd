@@ -55,7 +55,7 @@ $view .="
                         <th>CALLE</th>
                         <th>REGISTROS</th>
                         <th>LOCALIDAD</th>
-                        <th>listaS</th>
+                        <th>LISTAS</th>
                 </tr>
         </thead>
 ";
@@ -101,6 +101,7 @@ while($fila = mysqli_fetch_assoc($hacer)){
   },
   success:  function (response) { //una vez que el archivo recibe el request lo procesa y lo devuelve
           $('#resultado2').html(response);
+        
   }
 });
 }

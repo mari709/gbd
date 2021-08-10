@@ -23,23 +23,23 @@ if(isset(($_SESSION['status']))){
       <div class="card-group p-4 m-4">
   <div class="card text-center">
     <div class="card-body">
-      <h5 class="card-title text-uppercase">Buscar personas</h5>
-      <p class="card-text">Buscar contribuyentes a partir de su <b>nombre</b>, <b>localidad</b>, y/o <b>ciudad</b></p>
+      <h5 class="card-title text-uppercase">Buscar personas por información parcial</h5>
+      <p class="card-text">Buscar contribuyentes a partir de su <b>nombre</b>, <b>domicilio</b>, y/o <b>localidad</b></p>
       <a href="buscar_personas.php" class="btn btn-primary">acceder</a>
     </div>
   </div>
   <div class="card text-center">
     <div class="card-body">
-      <h5 class="card-title text-uppercase">Ranking de calles</h5>
-      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-      <a href="buscar_personas.php" class="btn btn-primary">acceder</a>
+      <h5 class="card-title text-uppercase">Ranking de calles con más contribuyentes</h5>
+      <p class="card-text">Conocer <b>calles con más contribuyentes</b> en un rango elegido de alturas de calles.</p>
+      <a href="ranking_calles.php" class="btn btn-primary">acceder</a>
     </div>
   </div>
   <div class="card text-center">
     <div class="card-body">
-      <h5 class="card-title text-uppercase">Buscar por calle</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-      <a href="buscar_personas.php" class="btn btn-primary">acceder</a>
+      <h5 class="card-title text-uppercase">Buscar personas por calle</h5>
+      <p class="card-text">Buscar <b>contribuyentes de una determinada calle</b> y rango de númeración de calle.</p>
+      <a href="buscar_calle.php" class="btn btn-primary">acceder</a>
     </div>
   </div>
 </div>

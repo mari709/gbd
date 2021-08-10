@@ -6,13 +6,13 @@
   <!-- Links -->
   <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
     <li class="nav-item">
-      <a class="nav-link" href="buscar_personas.php">Buscar Personas</a>
+      <a class="nav-link" href="buscar_personas.php">Buscar personas</a>
     </li>
     <li class="nav-item">
       <a class="nav-link" href="ranking_calles.php">Ranking de Calles</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="buscar_calle.php">Buscar por calle</a>
+      <a class="nav-link" href="buscar_calle.php">Buscar personas por calle</a>
     </li>
   </ul>
 

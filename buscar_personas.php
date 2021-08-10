@@ -15,7 +15,7 @@ if(isset(($_SESSION['status']))){
 <!--navbar-->
 <?php include_once './vistas/navbar.php' ?>
       <section class="container pt-4 buscador-personas">
-        <h1 class="h1-encabezado pt-4 pb-4">Buscador de personas</h1>
+        <h1 class="h1-encabezado pt-4 pb-4">Buscador de personas ingresando información total o parcial</h1>
       </section>
       
       <section class="container mt-4"> 
@@ -65,6 +65,7 @@ if(isset(($_SESSION['status']))){
           },
           success: function(response) {
             $("#resultado-personas").html(response);
+
           }
         });
       }
